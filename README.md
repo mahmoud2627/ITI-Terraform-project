@@ -21,3 +21,29 @@ This Terraform setup provisions a highly available web application infrastructur
 8. Remote-exec provisioner to install Apache or proxy in the machines.
 9. Local-exec provisioner to print all the machine's ip to a file "all-ips.txt".
 10. File provisioner to transfer "index.html" to the private ec2s.
+
+
+## VPC (Virtual Private Cloud)
+
+
+A VPC (10.0.0.0/16) is created to isolate the network resources for our application.
+The VPC contains both public and private subnets across two availability zones (us-east-1a and us-east-1b) for high availability.
+## Load Balancers
+Network Load Balancer (NLB):
+
+
+The NLB handles incoming traffic at the transport layer (TCP/UDP) and distributes it across the NGINX proxy servers in the public subnets. The NLB is optimized for handling high volumes of low-latency traffic.
+Public access to the infrastructure starts through the NLB endpoint ([http://public-nlb-***.amazonaws.com](http://public-nlb-%2A%2A%2A.amazonaws.com/)).
+Application Load Balancer (ALB):
+
+
+The ALB operates at the application layer (HTTP) and balances traffic between the NGINX proxies in the public subnets. It is configured for path-based routing, and sticky sessions.
+The ALB forwards traffic to the appropriate proxy server based on the application layer requests.
+Remote bucket for state file on "dev" workspace
+
+
+## DynamoDB State Locking
+
+
+A VPC (10.0.0.0/16) is created to isolate the network resources for our application.
+The VPC contains both public and private subnets across two availability zones (us-east-1a and us-east-1b) for high availability.
