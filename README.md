@@ -1,5 +1,11 @@
 # Welcome to the ITI-Terraform project wiki!
 
+![Uploading 1727120256255.gif…]()
+
+
+
+
+
 ## Project Description
 This Terraform setup provisions a highly available web application infrastructure within AWS, using EC2 instances distributed across multiple availability zones and using NLB in front of the NGINX proxy servers to distribute incoming traffic evenly across both public subnets and ALB in front of the APACHE web servers for distributing traffic to the private web servers.
 
