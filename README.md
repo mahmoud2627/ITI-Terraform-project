@@ -42,6 +42,12 @@ The ALB forwards traffic to the appropriate proxy server based on the applicatio
 Remote bucket for state file on "dev" workspace
 
 
+# terraform Modules
+1. Network Module: To create VPC, IGW, Public RT, Private RT, NAT Gatway, Public SG, and Private SG.
+2. Subnet Module: To create Public Subnets and Private Subnets.
+3. Instance Module: To create EC2 instances in the public subnets that run NGINX and EC2 instances in the private subnets running Apache.
+4. Loadbalancer Module: To create Network Load Balancer (NLB) and Application Load Balancer (ALB)
+
 ## DynamoDB State Locking
 
 
