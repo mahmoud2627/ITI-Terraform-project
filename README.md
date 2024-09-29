@@ -1,6 +1,7 @@
 # Welcome to the ITI-Terraform project wiki!
 
-![Uploading 1727120256255.gif…]()
+![1727120256255](https://github.com/user-attachments/assets/f8b0943d-0135-4921-ad2f-173f230433a7)
+
 
 
 
